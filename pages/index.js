@@ -6,24 +6,16 @@ const DUMMY_MEETUPS = [
     title: "A First Meetup",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/1280px-Stadtbild_M%C3%BCnchen.jpg",
-    address: "Some address 5, 12345 Some city",
-    description: "This is the first meeting",
+    address: "Some address 5, 12345 Some City",
+    description: "This is a first meetup!",
   },
   {
     id: "m2",
-    title: "The Second Meetup",
+    title: "A Second Meetup",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/1280px-Stadtbild_M%C3%BCnchen.jpg",
-    address: "Some address 10, 12345 Some city",
-    description: "This is the second meeting",
-  },
-  {
-    id: "m3",
-    title: "The Third Meetup",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/1280px-Stadtbild_M%C3%BCnchen.jpg",
-    address: "Some address 15, 12345 Some city",
-    description: "This is the third meeting",
+    address: "Some address 10, 12345 Some City",
+    description: "This is a second meetup!",
   },
 ];
 
@@ -37,12 +29,13 @@ function HomePage(props) {
 
 //   return {
 //     props: {
-//       meetups: DUMMY_MEETUPS,
-//     },
+//       meetups: DUMMY_MEETUPS
+//     }
 //   };
 // }
 
 export async function getStaticProps() {
+  // fetch data from an API
   return {
     props: {
       meetups: DUMMY_MEETUPS,

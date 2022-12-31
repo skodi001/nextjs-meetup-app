@@ -7,7 +7,7 @@ async function handler(req, res) {
     const { title, image, address, description } = data;
 
     const client = await MongoClient.connect(
-      "mongodb+srv://skodi001:Shoh19981009!@cluster0.rhpuu11.mongodb.net/test"
+      "mongodb+srv://skodi001:Shoh19981009!@cluster0.rhpuu11.mongodb.net/meetups=true&w=majority"
     );
     const db = client.db();
 
@@ -19,7 +19,7 @@ async function handler(req, res) {
 
     client.close();
 
-    res.satus(201).json({ message: "Meetups updated successfully" });
+    res.status(201).json({ message: "Meetups updated successfully" });
   }
 }
 
