@@ -6,17 +6,6 @@ function HomePage(props) {
   return <MeetupList meetups={props.meetups} />;
 }
 
-// export async function getServerSideProps(context) {
-//   const req = context.req;
-//   const res = context.res;
-
-//   return {
-//     props: {
-//       meetups: DUMMY_MEETUPS
-//     }
-//   };
-// }
-
 export async function getStaticProps() {
   const client = await MongoClient.connect(
     "mongodb+srv://skodi001:Shoh19981009!@cluster0.rhpuu11.mongodb.net/meetups=true&w=majority"
